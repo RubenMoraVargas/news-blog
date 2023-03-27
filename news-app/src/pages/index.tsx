@@ -1,4 +1,16 @@
+import Main from '@/root/components/dashboard/Dashboard';
 import Head from "next/head";
+import {NewItemProps} from "@/root/components/newItem/NewItem"
+
+const fakeNewsData: NewItemProps[] = 
+  [
+    {title:"First new", description:"First long description with details"},
+    {title:"Second new", description:"Second long description with details"},
+    {title:"Third new", description:"Third long description with details"},
+    {title:"Fourth new", description:"Fourth long description with details"},
+    {title:"Fifth new", description:"Fifth long description with details"},
+    {title:"Sixth new", description:"Sixth long description with details"},
+  ]
 
 export default function Home() {
   return (
@@ -10,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <Main features={fakeNewsData}/>
       </main>
     </>
   );
